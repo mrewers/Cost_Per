@@ -1,0 +1,15 @@
+{% extends "page.html" %}
+  {% block content %}
+    {% for tracker in trackers %}
+      <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <small class="text-muted">{{ tracker.cost }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ tracker.title }}</a></h2>
+          <p class="article-content">{{ tracker.description }}</p>
+        </div>
+      </article>
+    {% endfor %}
+    
+  {% endblock content %}
